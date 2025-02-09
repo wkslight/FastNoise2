@@ -31,7 +31,7 @@ project("FastNoise2")
             "src/FastSIMD/FastSIMD_Level_SSE*.cpp",
         })
     filter({ "toolset:msc*" })
-        buildoptions({ "/GL- /GS- /fp:fast" })
+        buildoptions({ "/GL- /GS- /fp:fast /wd4251 /wd4307" })
     filter({ "toolset:not msc*" })
         buildoptions({ "-ffast-math -fno-stack-protector" })
     filter({ "architecture:x86", "files:src/FastSIMD/FastSIMD_Level_Scalar.cpp" })
