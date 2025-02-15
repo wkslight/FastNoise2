@@ -29,6 +29,7 @@ project("FastNoise2")
         files({
             "src/FastSIMD/FastSIMD_Level_AVX*.cpp",
             "src/FastSIMD/FastSIMD_Level_SSE*.cpp",
+            "src/FastSIMD/FastSIMD_Level_SSSE3.cpp",
         })
     filter({ "toolset:msc*" })
         buildoptions({ "/GL- /GS- /fp:fast /wd4251 /wd4307" })
